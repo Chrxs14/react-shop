@@ -9,7 +9,7 @@ import AppContext from "../context/AppContext";
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   const { state } = useContext(AppContext);
-  console.log("estado");
+  console.log(state);
   const handleToggle = () => {
     setToggle(!toggle);
   };
@@ -47,9 +47,7 @@ const Header = () => {
           </li>
           <li className="navbar-shopping-cart">
             <img src={icon_shopping_cart} alt="shopping cart" />
-            <div>
-              {state.cart.length > 0 ? `<div>${state.cart.length}</div>` : null}
-            </div>
+            <div>{state.cart.length || 0}</div>
           </li>
         </ul>
       </div>

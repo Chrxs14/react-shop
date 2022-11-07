@@ -3,9 +3,12 @@ import axios from "axios";
 
 const useGetProducts = (API) => {
   const [products, setProducts] = useState([]);
-  useEffect(async () => {
-    const response = await axios(API);
-    setProducts(response.data);
+  useEffect(() => {
+    const loadProducts = async () => {
+      const response = await axios(API);
+      setProducts(response.data);
+    };
+    loadProducts();
   }, []);
   return products;
 };
