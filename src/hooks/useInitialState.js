@@ -14,9 +14,18 @@ const useInitialState = () => {
     });
   };
 
+  const removeFromCart = (indexValue) => {
+    setState({
+      ...state,
+      cart: state.cart.filter((item, index) => {
+        return index != indexValue;
+      }),
+    });
+  };
   return {
     state,
     addToCart,
+    removeFromCart,
   };
 };
 
