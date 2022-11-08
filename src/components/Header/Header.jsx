@@ -6,6 +6,7 @@ import logo_yarad_sale from "../../assets/logos/logo_yard_sale.svg";
 import Menu from "../Menu/Menu";
 import MyOrder from "../../containers/MyOrder/MyOrder";
 import AppContext from "../../context/AppContext";
+import Categories from "../Categories/Categories";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
@@ -14,32 +15,11 @@ const Header = () => {
   const handleToggle = () => {
     setToggle(!toggle);
   };
-
   return (
     <nav>
       <img src={icon_menu} alt="menu" className="menu" />
       <div className="navbar-left">
         <img src={logo_yarad_sale} alt="logo" className="logo-header" />
-        <ul>
-          <li>
-            <a href="/">All</a>
-          </li>
-          <li>
-            <a href="/">Clothes</a>
-          </li>
-          <li>
-            <a href="/">Electronics</a>
-          </li>
-          <li>
-            <a href="/">Furnitures</a>
-          </li>
-          <li>
-            <a href="/">Toys</a>
-          </li>
-          <li>
-            <a href="/">Others</a>
-          </li>
-        </ul>
       </div>
       <div className="navbar-right">
         <ul>

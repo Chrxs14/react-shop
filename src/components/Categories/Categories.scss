@@ -1,12 +1,5 @@
 @import "../../styles/vars";
 
-.ProductList {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 240px);
-  gap: 26px;
-  place-content: center;
-  margin: 3em 0 0 0;
-}
 .Categories ul {
   list-style: none;
   padding: 0;
@@ -14,8 +7,6 @@
   display: flex;
   align-items: center;
   height: 60px;
-  overflow: auto;
-  place-content: center;
 }
 
 .Categories ul {
@@ -33,11 +24,6 @@
   color: var(--hospital-green);
 }
 
-@media (max-width: 640px) {
-  .ProductList {
-    grid-template-columns: repeat(auto-fill, 140px);
-  }
-}
 @media (min-width: 640px) {
   .Categories {
     display: none;
